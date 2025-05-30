@@ -1,0 +1,33 @@
+@IdempotencyDemo_HostAddress = http://localhost:5000
+
+### Get all users
+GET {{IdempotencyDemo_HostAddress}}/users
+Accept: application/json
+
+### Create an user
+POST {{IdempotencyDemo_HostAddress}}/users
+Idempotency-Key: 00000000-0000-0000-0000-000000000006
+Content-Type: application/json
+{
+  "firstName": "Mark",
+  "lastName": "Anthonyy",
+  "email": "mark.anthony@gmail.com"
+}
+
+### Update an user
+PUT {{IdempotencyDemo_HostAddress}}/users
+Content-Type: application/json
+{
+  "id": 1,
+  "firstName": "Steven",
+  "lastName": "Smith",
+  "email": "steven.smith@gmail.com"
+}
+
+### Get an user
+GET {{IdempotencyDemo_HostAddress}}/users/1
+Accept: application/json
+
+### Delete an user
+DELETE {{IdempotencyDemo_HostAddress}}/users/3
+Accept: application/json
