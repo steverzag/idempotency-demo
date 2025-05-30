@@ -52,7 +52,7 @@ Being this last the default one to use if want to take the cached implementation
 By default, the application will be available at `http://localhost:5000` (or `https://localhost:5001` for HTTPS).
 
 ## Usage
-The application exposes the endpoints that allows to create or modify users. It emplements two ways to manage idempotency on the Create User endpoint(POST /users). You can use one or the other by toggle them on the [User Endpoints](IdempotencyDemo.API/UserEndpoints.cs) file.
+The application exposes the endpoints that allows to create or modify users. It emplements two ways to manage idempotency on the Create User endpoint(POST /users). You can use one or the other by toggle them on the [User Endpoints](IdempotencyDemo.API/Endpoints/UserEndpoints.cs) file.
 
 ![Toogle idempotency filters on create user endpoint](https://github.com/steverzag/docs-assets/blob/main/images/idempotency-demo-toggle-filters.png)
 
